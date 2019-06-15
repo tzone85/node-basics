@@ -1,7 +1,11 @@
 var fs = require('fs');
 
 // create a directory
-fs.mkdirSync('stuff2');
+fs.mkdir('things', function () {
+    fs.readFile('readMe.txt', 'utf8', function (err, data) {
+       fs.writeFile('./things/writeMe.txt', data);
+    });
+});
 
 // remove a directory
-fs.rmdirSync('stuff');
+// fs.rmdirSync('stuff');
