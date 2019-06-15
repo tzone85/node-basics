@@ -13,7 +13,7 @@ myEmitter.on('someEvent', function (mssg) {
 myEmitter.emit('someEvent', 'the event was emitted');
 */
 
-/*
+
 var Person = function (name) {
     this.name = name;
 };
@@ -34,5 +34,5 @@ people.forEach(function (person) {
 
 james.emit('speak', 'hey dudes');
 ryu.emit('speak', 'Ndingumqwathi');
-*/
+
 
