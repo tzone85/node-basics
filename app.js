@@ -2,6 +2,9 @@ var fs = require('fs');
 
 // Reading files
 
-var readme = fs.readFileSync('readme.txt', 'utf8');
+fs.readFile('readme.txt', 'utf8', function (err, data) {
+    fs.writeFile('writeMe2', data);
+});
 
-fs.writeFileSync('writeMe.txt', readme);
+console.log('test');
+// fs.writeFileSync('writeMe.txt', readme);
