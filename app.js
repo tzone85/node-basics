@@ -1,5 +1,6 @@
 var events = require('events');
 var util = require('util');
+var fs = require('fs');
 
 // handling events and emitters.
 
@@ -13,7 +14,7 @@ myEmitter.on('someEvent', function (mssg) {
 myEmitter.emit('someEvent', 'the event was emitted');
 */
 
-
+/*
 var Person = function (name) {
     this.name = name;
 };
@@ -34,5 +35,11 @@ people.forEach(function (person) {
 
 james.emit('speak', 'hey dudes');
 ryu.emit('speak', 'Ndingumqwathi');
+*/
 
+// Reading files
+
+var readme = fs.readFileSync('readme.txt', 'utf8');
+
+console.log(readme);
 
