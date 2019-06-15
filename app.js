@@ -6,5 +6,6 @@ fs.readFile('readme.txt', 'utf8', function (err, data) {
     fs.writeFile('writeMe2', data);
 });
 
-console.log('test');
-// fs.writeFileSync('writeMe.txt', readme);
+// deleting a file
+
+fs.unlink('writeMe2');
