@@ -1,38 +1,9 @@
-var events = require('events');
-var util = require('util');
+var http = require('http');
+var fs = require('fs');
 
-// handling events and emitters.
+var myReadStream = fs.createReadStream(__dirname + '/readme.txt', 'utf8');
 
-/*
-var myEmitter = new events.EventEmitter();
-
-myEmitter.on('someEvent', function (mssg) {
-    console.log(mssg);
+myReadStream.on('data', function (chunk) {
+   console.log('new chunk received: ');
+   console.log(chunk);
 });
-
-myEmitter.emit('someEvent', 'the event was emitted');
-*/
-
-
-var Person = function (name) {
-    this.name = name;
-};
-
-util.inherits(Person, events.EventEmitter);
-
-var james = new Person('james');
-var mary = new Person('mary');
-var ryu = new Person('ryu');
-
-var people = [james, mary, ryu];
-
-people.forEach(function (person) {
-   person.on('speak', function (mssg) {
-      console.log(person.name + ' said: ' + mssg);
-   });
-});
-
-james.emit('speak', 'hey dudes');
-ryu.emit('speak', 'Ndingumqwathi');
-
-
