@@ -1,7 +1,12 @@
-var fs = require('fs');
+var express = require('express');
 
-// create a directory
-fs.mkdirSync('stuff2');
+var app = express();
 
-// remove a directory
-fs.rmdirSync('stuff');
+app.get('/', function (req, res) {
+   res.send('this is the homepage');
+});
+
+app.get('/contact', function (req, res) {
+    res.send('this is the contact page');
+});
+app.listen(3000);

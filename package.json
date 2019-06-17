@@ -1,0 +1,27 @@
+{
+  "name": "todo-app-nodejs-intro",
+  "version": "1.0.0",
+  "description": "Yay, you read me!!",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzone85/node-basics.git"
+  },
+  "keywords": [
+    "Node",
+    "Ninja"
+  ],
+  "author": "Magnifacent Beast",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tzone85/node-basics/issues"
+  },
+  "homepage": "https://github.com/tzone85/node-basics#readme"
+}
