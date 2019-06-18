@@ -5,17 +5,17 @@ var app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-   res.sendFile(__dirname + '/index.html');
+   res.render('index');
 });
 
 app.get('/contact', function (req, res) {
-    res.sendFile(__dirname + '/contact.html');
+    res.render('contact');
 });
 
 // route variables using wrap parameters
 
 app.get('/profile/:name', function (req, res) {
-    var data = {age: 29, job: 'ninja'};
+    var data = {age: 29, job: 'ninja', hobbies: ['eating', 'fishing', 'reading']};
     res.render('profile', {person: req.params.name, data: data});
 });
 
