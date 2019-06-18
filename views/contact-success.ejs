@@ -31,17 +31,9 @@
 <body>
 
     <% include nav.ejs %>
-    <h1>Contact Us!!</h1>
-    <p>Contact Us To Satisfy All Your Needs!</p>
-
-    <form id="contact-form" action="/contact" method="POST">
-        <label for="who">Who do you want to contact?</label>
-        <input type="text" name="who" value="<%= querryString.person %>">
-        <label for="department">Which department?</label>
-        <input type="text" name="department" value="<%= querryString.dept %>">
-        <label for="email">Your Email</label>
-        <input type="email" name="email">
-        <input type="submit" value="submit">
-    </form>
+    <h1><%= data.who %>, Thank You For Contacting Our Ninjas!!</h1>
+    <p>One of our ninjas from the <%= data.department %> department, will contact you via your <%= data.email%> email.</p>
+    <hr>
+    <h2>THANK YOU</h2>
 </body>
 </html>
