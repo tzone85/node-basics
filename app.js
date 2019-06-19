@@ -1,11 +1,15 @@
-var fs = require('fs');
+var express = require('express');
 
-// Reading files
 
-fs.readFile('readme.txt', 'utf8', function (err, data) {
-    fs.writeFile('writeMe2', data);
-});
+var app = express();
 
-// deleting a file
+// set up template engine
+app.set('view engine', 'ejs');
 
-fs.unlink('writeMe2');
+// static files (by removing the first parameter of the 'use' middleware, it's not going to be route specific)
+app.use(express.static('/public'));
+
+// listen to port
+
+app.listen(3000);
+console.log('Listening to port: 3000');

@@ -1,0 +1,24 @@
+{
+  "name": "basics",
+  "version": "1.0.0",
+  "description": "a little doto app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzone85/node-basics.git"
+  },
+  "author": "King-T",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tzone85/node-basics/issues"
+  },
+  "homepage": "https://github.com/tzone85/node-basics#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
+}
